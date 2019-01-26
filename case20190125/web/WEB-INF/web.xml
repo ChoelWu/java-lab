@@ -4,42 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <servlet-class>com.choel.HelloWorld</servlet-class>
+        <servlet-name>LoginFormServlet</servlet-name>
+        <servlet-class>com.choel.LoginFormServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/servlet/hello</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetInitParameterServlet</servlet-name>
-        <servlet-class>com.choel.GetInitParameterServlet</servlet-class>
-        <init-param>
-            <param-name>repeat</param-name>
-            <param-value>5</param-value>
-        </init-param>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>GetInitParameterServlet</servlet-name>
-        <url-pattern>/servlet/param</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetServerInfoServlet</servlet-name>
-        <servlet-class>com.choel.GetServerInfoServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>GetServerInfoServlet</servlet-name>
-        <url-pattern>/servlet/server</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>GetHeaderInfoServlet</servlet-name>
-        <servlet-class>com.choel.GetHeaderInfoServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>GetHeaderInfoServlet</servlet-name>
-        <url-pattern>/servlet/header</url-pattern>
+        <servlet-name>LoginFormServlet</servlet-name>
+        <url-pattern>/servlet/loginForm</url-pattern>
     </servlet-mapping>
 </web-app>
