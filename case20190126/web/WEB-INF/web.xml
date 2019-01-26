@@ -27,4 +27,22 @@
         <servlet-name>Survey2Servlet</servlet-name>
         <url-pattern>/servlet/survey2</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <servlet-class>com.choel.guestbook.AddMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <url-pattern>/servlet/addMessage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetMessageServlet</servlet-name>
+        <servlet-class>com.choel.guestbook.GetMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetMessageServlet</servlet-name>
+        <url-pattern>/servlet/getMessage</url-pattern>
+    </servlet-mapping>
 </web-app>
