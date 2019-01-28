@@ -5,9 +5,9 @@ import java.sql.*;
 public class MysqlConnect {
     public static void main(String[] args) {
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8";
+        String url = "jdbc:mysql://localhost:3306/java_lab?useUnicode=true&characterEncoding=UTF-8";
         String user = "root";
-        String pwd = "root";
+        String pwd = "Wuc14561013";
         Connection conn = null;
         String sql = "insert into student(id, name, class_id, grade_id) value(?, ?, ?, ?)";
         try {
@@ -23,7 +23,7 @@ public class MysqlConnect {
             pstmt = conn.prepareStatement(sql);
             ResultSet res = pstmt.executeQuery();
             while (res.next()) {
-                System.out.println("id:" + res.getInt("id") + " | name" + res.getString("name") + " | class_id:" + res.getInt("class_id") + " | grade_id:" + res.getInt("grade_id"));
+                System.out.println("id:" + res.getInt("id") + " | name:" + res.getString("name") + " | class_id:" + res.getInt("class_id") + " | grade_id:" + res.getInt("grade_id"));
             }
             if(res != null) {
                 res.close();

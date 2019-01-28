@@ -15,9 +15,9 @@ import java.sql.*;
 public class GetMessageServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/java_leb?useUnicode=true&amp;characterEncoding=UTF-8";
+        String url = "jdbc:mysql://localhost:3306/java_lab?useUnicode=true&characterEncoding=UTF-8";
         String user = "root";
-        String pwd = "root";
+        String pwd = "Wuc14561013";
         Connection conn = null;
         String sql = "select * from guestbook order by id desc";
         response.setContentType("text/html;charset=utf-8");
@@ -25,7 +25,7 @@ public class GetMessageServlet extends HttpServlet {
         out.println("<html>");
         out.println("<head><title>display message</title></head>");
         out.print("<body>");
-        out.print("<a href='" + request.getContextPath() + "/add_message.html'>添加新的留言内容</href><br>");
+        out.print("<a href='" + request.getContextPath() + "/add_message.html'>添加新的留言内容</a><br>");
         out.print("留言内容<br><br>");
         try {
             Class.forName(driver);
@@ -55,7 +55,7 @@ public class GetMessageServlet extends HttpServlet {
     }
 
     private void printRow(PrintWriter out, ResultSet res) throws SQLException {
-        out.print("<table width='600'> border='0' style='table-layout: fixed; word-break:break-all;'>");
+        out.print("<table width='600' border='1' style='table-layout: fixed; word-break:break-all;'>");
         out.print("<tr><td width='50'>编号</td><td width='550'>" + res.getInt("id") + "</td></tr>");
         out.print("<tr><td>姓名</td><td>" + res.getString("name") + "</td></tr>");
         out.print("<tr><td>电话</td><td>" + StringUtil.changeNull(res.getString("phone"), "没填") + "</td></tr>");

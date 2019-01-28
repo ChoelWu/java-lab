@@ -16,11 +16,11 @@ import java.text.SimpleDateFormat;
 public class AddMessageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/java_leb?useUnicode=true&amp;characterEncoding=UTF-8";
+        String url = "jdbc:mysql://localhost:3306/java_lab?useUnicode=true&characterEncoding=UTF-8";
         String user = "root";
-        String pwd = "root";
+        String pwd = "Wuc14561013";
         Connection conn = null;
-        String sql = "insert into guestbook (id, name, email, phone, title, content, time) value(gb_seq.nextval, ?, ?, ?, ?, ?, ?)";
+        String sql = "insert into guestbook (`id`, `name`, `email`, `phone`, `title`, `content`, `time`) value(null, ?, ?, ?, ?, ?, ?)";
         int result = 0;
         request.setCharacterEncoding("utf-8");
         String name = request.getParameter("name");
