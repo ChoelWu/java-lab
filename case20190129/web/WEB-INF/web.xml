@@ -3,4 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>SetCookieServlet</servlet-name>
+        <servlet-class>com.choel.servlet.cookie.SetCookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetCookieServlet</servlet-name>
+        <url-pattern>/servlet/setCookies</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <servlet-class>com.choel.servlet.cookie.GetCookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <url-pattern>/servlet/getCookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DemoSessionServlet</servlet-name>
+        <servlet-class>com.choel.servlet.session.DemoSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemoSessionServlet</servlet-name>
+        <url-pattern>/servlet/demoSession</url-pattern>
+    </servlet-mapping>
 </web-app>

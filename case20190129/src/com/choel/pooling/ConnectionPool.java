@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class ConnectionPool {
+class ConnectionPool {
     private ArrayList<Connection> pool;
     private String url;
     private String username;
@@ -26,11 +26,11 @@ public class ConnectionPool {
         addConnection();
     }
 
-    public synchronized void release(Connection conn) {
+    synchronized void release(Connection conn) {
         pool.add(conn);
     }
 
-    public synchronized void closePool() {
+    synchronized void closePool() {
         for (int i = 0; i < pool.size(); i++) {
             try {
                 ((Connection) pool.get(i)).close();
@@ -41,14 +41,14 @@ public class ConnectionPool {
         }
     }
 
-    public static ConnectionPool getInstance() {
+    static ConnectionPool getInstance() {
         if (instance == null) {
             instance = new ConnectionPool();
         }
         return instance;
     }
 
-    public synchronized Connection getConnection() {
+    synchronized Connection getConnection() {
         if (pool.size() > 0) {
             Connection conn = pool.get(0);
             pool.remove(conn);
