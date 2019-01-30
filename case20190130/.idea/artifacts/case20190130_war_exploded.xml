@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="case20190130:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/case20190130_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="case20190130/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="case20190130" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
