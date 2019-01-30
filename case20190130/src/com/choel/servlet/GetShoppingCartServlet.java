@@ -29,11 +29,11 @@ public class GetShoppingCartServlet extends HttpServlet {
         out.println("<body>");
         if (cart == null) {
             out.println("<h1>您的购物车为空</h1><br>");
-            out.println("<a href='display_item.html'>浏览商品，添加商品到购物车</a><br>");
+            out.println("<a href='/display_item.html'>浏览商品，添加商品到购物车</a><br>");
             return;
         } else {
             out.println("<h1>显示购物车内容</h1><br>");
-            out.println("<a href='display_item.html'>浏览商品，添加商品到购物车</a><br>");
+            out.println("<a href='/display_item.html'>浏览商品，添加商品到购物车</a><br>");
             PrintCartItem(out, cart);
         }
         out.println("</body>");
@@ -45,7 +45,7 @@ public class GetShoppingCartServlet extends HttpServlet {
     private void PrintCartItem(PrintWriter out, ShoppingCart cart) {
         ArrayList<CartItem> items = cart.getCart();
         CartItem item = null;
-        out.println("<table> width='500' border='1' align='left' ");
+        out.println("<table width='500' border='1' align='left'>");
         out.println("<tr>");
         out.println("<td width='200'>商品名称</td>");
         out.println("<td width='100'>价格</td>");

@@ -22,7 +22,7 @@ public class AddShoppingCartServlet extends HttpServlet {
         ShoppingCart cart = (ShoppingCart) session.getAttribute("shoppingcart");
         if (cart == null) {
             cart = new ShoppingCart();
-            session.setAttribute("shopopingcart", cart);
+            session.setAttribute("shoppingcart", cart);
         }
 
         String id = request.getParameter("id");
@@ -56,7 +56,7 @@ public class AddShoppingCartServlet extends HttpServlet {
         out.println("<head><title>add items error</title></head>");
         out.println("<body>");
         out.println("<h1>缺少商品参数或商品参数不正确，未能成功添加商品到购物车</h1><br>");
-        out.println("<a href='display_item.html'>继续浏览商品，添加商品到购物车</a><br>");
+        out.println("<a href='/display_item.html'>继续浏览商品，添加商品到购物车</a><br>");
         out.println("</body>");
         out.println("</html>");
         out.flush();
