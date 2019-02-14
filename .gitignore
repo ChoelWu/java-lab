@@ -1,1 +1,16 @@
 out
+*.class
+*.war
+*.ear
+target/
+.settings/
+.project
+.idea/
+*.log
+*.catch
+*.tmp
+*.patch
+*.orig
+.classpath
+/.idea/
+*/.idea/
